@@ -23,6 +23,7 @@ import java.io.*;
 import java.util.*;
 
 public class Story implements Serializable {
+    private String title;
     private String text;                 // text of the story
     private List<String> placeholders;   // list of placeholders to fill in
     private int filledIn;                // number of placeholders that have been filled in
@@ -33,13 +34,14 @@ public class Story implements Serializable {
         text = "";
         placeholders = new ArrayList<String>();
         filledIn = 0;
-        htmlMode = false;
+        htmlMode = true;
         clear();
     }
 
     /** constructs a new Story reading its text from the given input stream */
-    public Story(InputStream stream) {
+    public Story(InputStream stream, String title) {
         read(stream);
+        this.title = title;
     }
 
     /** resets the story back to an empty initial state */
@@ -116,4 +118,6 @@ public class Story implements Serializable {
     public String toString() {
         return text;
     }
+
+    public String getTitle() { return title; }
 }
