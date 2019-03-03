@@ -18,6 +18,7 @@ public class StoriesAdapter extends ArrayAdapter<Story> {
         stories = objects;
     }
 
+    /** Update or create view from story adapter. */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {

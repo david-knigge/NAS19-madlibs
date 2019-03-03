@@ -38,6 +38,7 @@ public class StoryPickerActivity extends AppCompatActivity {
         stories.add(new Story(this.getResources().openRawResource(R.raw.madlib4_dance), "Dance"));
     }
 
+    /** Listens for click on story, passes story to new intent. */
     private class GridItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

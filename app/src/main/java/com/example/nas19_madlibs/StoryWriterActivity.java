@@ -12,6 +12,7 @@ public class StoryWriterActivity extends AppCompatActivity {
 
     Story story;
 
+    /** Retrieve selected story, or restore from bundle. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class StoryWriterActivity extends AppCompatActivity {
         super.setTitle(title);
     }
 
+    /** Update GUI elements to reflect updates in Story object. */
     public void renderStoryInfo() {
         TextView wordsLeft = findViewById(R.id.wordsLeft);
         TextView wordType = findViewById(R.id.wordType);
@@ -53,7 +55,7 @@ public class StoryWriterActivity extends AppCompatActivity {
         textInput.setHint(placeholder);
     }
 
-    /** Validates user input,  */
+    /** Validates user input, adds input to Story object. */
     public void okClicked(View view) {
         String input = ((EditText) findViewById(R.id.textInput)).getText().toString();
 

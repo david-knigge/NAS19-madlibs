@@ -30,6 +30,7 @@ public class StoryActivity extends AppCompatActivity {
         super.setTitle(title);
     }
 
+    /** Shows created story. */
     public void renderStory() {
         TextView storyTitle = findViewById(R.id.storyViewTitle);
         TextView storyText = findViewById(R.id.storyViewText);
