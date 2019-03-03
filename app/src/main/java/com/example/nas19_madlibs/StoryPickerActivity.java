@@ -45,7 +45,6 @@ public class StoryPickerActivity extends AppCompatActivity {
             Story clickedStory = (Story) parent.getItemAtPosition(position);
             Intent intent = new Intent(StoryPickerActivity.this, StoryWriterActivity.class);
             intent.putExtra("clicked_story", clickedStory);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
     }
